@@ -1,49 +1,61 @@
-# 🇨🇳 AI Chinese Naming Skills
+# 🇨🇳 AI 中文起名助手 (Chinese Naming Skills)
 
-This repository contains specialized AI skills for **Chinese Baby Naming**. These skills are designed for use with AI agents (like Hermes Agent or Claude Code) to assist users in selecting meaningful names based on classical literature or traditional astrology.
+本仓库包含两个专业的 **AI 起名 Skill**，专为 AI 智能体（如 Hermes Agent、Claude 等）设计。旨在帮助用户结合中国传统文学与命理学，取一个既有文化底蕴又符合五行平衡的好名字。
 
-## 📦 Included Skills
+## 📦 包含的 Skill
 
 ### 1. 📚 中文典籍起名 (Chinese Classical Naming)
-**Directory**: `chinese-naming/`
+**目录**: `chinese-naming/`
 
-An interactive naming assistant based on classic Chinese literature (*Shijing*, *Chuci*, *Analects*, etc.).
+这是一个基于中国经典古籍的交互式起名助手，引导用户通过多轮对话，找到具有深厚文化根基的完美名字。
 
-*   **Massive Database**: Over **1,263+ names** collected from ancient texts.
-*   **Interactive Guidance**: Guides users through gender, style (Classical, Poetic, etc.), and meaning preferences.
-*   **Detailed Analysis**: Provides source text, original quote, meaning, and pronunciation analysis for every name.
-*   **Best For**: Parents seeking cultural elegance and literary roots.
+**✨ 核心亮点**:
+*   **海量数据库**: 收录了超过 **1,263 个名字**，来源包括：
+    *   📖 《诗经》—— 600+ 名字（涵盖男女）
+    *   🌊 《楚辞》—— 630+ 名字
+    *   📜 《论语》、《礼记》、《易经》等
+*   **交互式引导**: 询问用户关于性别、风格偏好（如：古典、诗意、豪迈等）以及期望的寓意。
+*   **详尽解析**: 对推荐的每一个名字，都提供**出处原文**、**释义**以及**音律分析**。
+
+**🎯 适用人群**: 希望名字有文学出处、显得优雅且有内涵的父母。
+
+---
 
 ### 2. 🔮 生辰八字起名 (Bazi & Five Elements Naming)
-**Directory**: `bazi-naming/`
+**目录**: `bazi-naming/`
 
-A professional naming assistant based on traditional Bazi (Four Pillars of Destiny) and the Five Elements (Wu Xing).
+这是一个基于传统命理学（四柱八字/八字）的起名助手。通过分析宝宝的出生时间来平衡其“五行”。
 
-*   **Automatic Analysis**: Computes the Bazi chart from birth date/time, determines the "Day Master" strength, and identifies beneficial elements (Xi Yong Shen).
-*   **Zodiac Compatibility**: Checks against the 12 Zodiac animals' favorable and unfavorable radicals.
-*   **Character Library**: Includes 1,000+ characters categorized by element.
-*   **Best For**: Parents following traditional customs for luck, balance, and destiny.
+**✨ 核心亮点**:
+*   **自动八字排盘**: 根据公历出生年月日时，自动计算四柱（年、月、日、时）。
+*   **五行分析**: 判定“日主”强弱，精准找出平衡命局所需的**喜用神**（如：喜水、喜金等）。
+*   **生肖宜忌**: 检查名字是否符合 12 生肖的喜用部首和禁忌。
+*   **五行字库**: 收录 1,000+ 汉字，按金、木、水、火、土分类，方便精准选字。
 
-## 🚀 How to Use
+**🎯 适用人群**: 遵循传统习俗，希望名字能为孩子带来好运、平衡五行的家庭。
 
-### For AI Agents
-Place these folders into your agent's skills directory (e.g., `~/.hermes/skills/` or `.claude/skills/`).
+---
 
-### Manual Trigger
-You can ask the AI:
-- **For Classical Naming**: "帮我起个名字", "给宝宝取个有文化底蕴的名字"
-- **For Bazi Naming**: "根据生辰八字起名", "看看宝宝五行缺什么，起个名字"
+## 🚀 如何使用
 
-## 📋 Skill Structure
+### 对于 AI Agent
+将这些文件夹放入 Agent 的 skills 目录中（例如 `~/.hermes/skills/` 或 `.claude/skills/`）。Agent 会在用户触发相关关键词时自动加载。
+
+### 触发词参考
+你可以直接对 AI 说：
+*   **典籍起名**: “帮我起个名字”、“给宝宝取个有文化底蕴的名字”
+*   **八字起名**: “根据生辰八字起名”、“看看宝宝五行缺什么，起个名字”
+
+## 📋 项目结构
 
 ```
 📂 skills
 ├── 📂 chinese-naming
-│   ├── SKILL.md
+│   ├── SKILL.md          # Skill 主逻辑与配置
 │   └── 📂 references
-│       └── name-database.md
+│       └── name-database.md  # 1263+ 古籍名字数据库
 └── 📂 bazi-naming
-    ├── SKILL.md
+    ├── SKILL.md          # Skill 主逻辑与配置
     └── 📂 references
-        └── bazi-knowledge.md
+        └── bazi-knowledge.md # 八字排盘、五行与生肖知识库
 ```
